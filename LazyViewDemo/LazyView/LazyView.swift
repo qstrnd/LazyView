@@ -7,19 +7,6 @@
 
 import UIKit
 
-// Questions
-// - is configuration and layout the same operation?
-// - postConfigureHandler - should be called only after successful configuration? YES I CHOSE TO CALL ONLY ON SUCCESS
-// - view did layout subviews what to do?
-
-// DONE: cleanup operation when condition is false
-// DONE: get the underlying view directly
-// DONE: configure on condition (and setup if it's the first time)
-// DONE: layout on condition - Not needed (layout only goes after configuration)
-// DONE: describe initialization
-// DONE: describe configuration
-// DONE: describe basic view hierarchy (zIndex, later nested types)
-
 protocol LazyViewReference {
     var uniqueViewId: UUID { get }
     var asUIView: UIView? { get }
