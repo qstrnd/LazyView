@@ -9,6 +9,7 @@ import UIKit
 
 struct LazyViewContainerConfiguration {
     typealias ViewId = UUID
+    typealias RelationsDictionary = [ViewId: Relations]
 
     struct Relations {
         let superview: Item?
@@ -33,12 +34,16 @@ struct LazyViewContainerConfiguration {
 
     // MARK: Private
 
-    private var relations: [ViewId: Relations] = [:]
+    private var relations: RelationsDictionary = [:]
 
     // MARK: - Methods
 
     init(relations: [ViewId : Relations]) {
         self.relations = relations
+    }
+
+    init(@LazyViewContainerConfigurationBuilder _ relations: () -> RelationsDictionary) {
+        self.relations = relations()
     }
 
     func getRelations(for view: LazyViewReference) -> Relations {

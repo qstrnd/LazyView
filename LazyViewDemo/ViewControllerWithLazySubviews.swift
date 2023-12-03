@@ -11,18 +11,17 @@ class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer {
 
     // MARK: - Properties
 
-    var lazyViewConfiguration: LazyViewContainerConfiguration {
-        .init(
-            relations: [
-                label.uniqueViewId: .init(superview: .view(stackView), referenceNeighbor: nil),
-                textField.uniqueViewId: .init(superview: .view(stackView), referenceNeighbor: .lazyView(label)),
-                nestedLazyStack.uniqueViewId: .init(superview: .view(stackView), referenceNeighbor: .lazyView(textField)),
-                button1.uniqueViewId: .init(superview: .lazyView(nestedLazyStack), referenceNeighbor: nil),
-                button2.uniqueViewId: .init(superview: .lazyView(nestedLazyStack), referenceNeighbor: .lazyView(button1)),
-                button3.uniqueViewId: .init(superview: .lazyView(nestedLazyStack), referenceNeighbor: .lazyView(button2)),
-                button4.uniqueViewId: .init(superview: .lazyView(nestedLazyStack), referenceNeighbor: .lazyView(button3))
-            ]
-        )
+    lazy var lazyViewConfiguration = LazyViewContainerConfiguration {
+        stackView.containing {
+            label
+            nestedLazyStack.containing {
+                button1
+                button2
+                button3
+                button4
+            }
+            textField
+        }
     }
 
     private let label: LazyView<UILabel>

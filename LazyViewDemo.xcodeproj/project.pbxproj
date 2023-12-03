@@ -21,6 +21,7 @@
 		A1DB64E02B1CFDC600F3C8AA /* LazyViewContainerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB64DF2B1CFDC600F3C8AA /* LazyViewContainerConfiguration.swift */; };
 		A1DB64E22B1D0A7400F3C8AA /* ViewControllerWithLazySubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB64E12B1D0A7400F3C8AA /* ViewControllerWithLazySubviews.swift */; };
 		A1DB64E92B1D21E200F3C8AA /* LazyViewInsertionSupporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB64E82B1D21E200F3C8AA /* LazyViewInsertionSupporting.swift */; };
+		A1DB64EB2B1D237C00F3C8AA /* LazyViewContainerConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB64EA2B1D237C00F3C8AA /* LazyViewContainerConfigurationBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A1DB64DF2B1CFDC600F3C8AA /* LazyViewContainerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewContainerConfiguration.swift; sourceTree = "<group>"; };
 		A1DB64E12B1D0A7400F3C8AA /* ViewControllerWithLazySubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithLazySubviews.swift; sourceTree = "<group>"; };
 		A1DB64E82B1D21E200F3C8AA /* LazyViewInsertionSupporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewInsertionSupporting.swift; sourceTree = "<group>"; };
+		A1DB64EA2B1D237C00F3C8AA /* LazyViewContainerConfigurationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewContainerConfigurationBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				A1DB64DB2B1CEC6600F3C8AA /* LazyViewContainer.swift */,
 				A1DB64E82B1D21E200F3C8AA /* LazyViewInsertionSupporting.swift */,
 				A1DB64DF2B1CFDC600F3C8AA /* LazyViewContainerConfiguration.swift */,
+				A1DB64EA2B1D237C00F3C8AA /* LazyViewContainerConfigurationBuilder.swift */,
 			);
 			path = LazyView;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DB64EB2B1D237C00F3C8AA /* LazyViewContainerConfigurationBuilder.swift in Sources */,
 				A1DB64E92B1D21E200F3C8AA /* LazyViewInsertionSupporting.swift in Sources */,
 				A1DB64E02B1CFDC600F3C8AA /* LazyViewContainerConfiguration.swift in Sources */,
 				A1DB64DA2B1B333700F3C8AA /* LazyView.swift in Sources */,
