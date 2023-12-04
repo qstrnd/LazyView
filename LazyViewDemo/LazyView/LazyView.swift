@@ -7,9 +7,10 @@
 
 import UIKit
 
-protocol LazyViewReference {
+protocol LazyViewReference: AnyObject {
     var uniqueViewId: UUID { get }
     var asUIView: UIView? { get }
+    var container: LazyViewContainer? { get set }
 
     func prepare()
 }

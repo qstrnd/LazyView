@@ -58,30 +58,41 @@ enum LazyViewContainerConfigurationTransientBuilder {
     }
 }
 
+typealias LazyViewContainerConfigurationBuilderResult = (relations: LazyViewContainerConfiguration.RelationsDictionary, lazyViews: [LazyViewReference])
+
 @resultBuilder
 enum LazyViewContainerConfigurationBuilder {
     static func buildBlock(_ components: ViewConfigurationItemConvertible...) -> [ConfigurationBuilderItem] {
         components.map { $0.configurationItem }
     }
 
-    static func buildFinalResult(_ components: [ConfigurationBuilderItem]) -> LazyViewContainerConfiguration.RelationsDictionary {
+    static func buildFinalResult(_ components: [ConfigurationBuilderItem]) -> LazyViewContainerConfigurationBuilderResult {
         buildKeyedRelations(in: nil, from: components)
     }
 
-    private static func buildKeyedRelations(in parentItem: ConfigurationBuilderItem?, from nestedItems: [ConfigurationBuilderItem]) -> LazyViewContainerConfiguration.RelationsDictionary {
-        var result: LazyViewContainerConfiguration.RelationsDictionary = [:]
+    private static func buildKeyedRelations(
+        in parentItem: ConfigurationBuilderItem?,
+        from nestedItems: [ConfigurationBuilderItem]
+    ) -> LazyViewContainerConfigurationBuilderResult {
+
+        var relations: LazyViewContainerConfiguration.RelationsDictionary = [:]
+        var lazyViews: [LazyViewReference] = []
 
         var previousItem: ConfigurationBuilderItem?
         nestedItems.forEach { item in
             if !item.nestedItems.isEmpty {
                 let nestedResult = buildKeyedRelations(in: item, from: item.nestedItems)
-                result.merge(nestedResult, uniquingKeysWith: { (_, new) in
+
+                lazyViews.append(contentsOf: nestedResult.lazyViews)
+                relations.merge(nestedResult.relations, uniquingKeysWith: { (_, new) in
                     new
                 })
             }
 
-            if case .lazyView(let lazyViewReference, _) = item {
-                result[lazyViewReference.uniqueViewId] = .init(
+            if case .lazyView(let lazyView, _) = item {
+                lazyViews.append(lazyView)
+
+                relations[lazyView.uniqueViewId] = .init(
                     superview: parentItem.flatMap { configurationRelationsItem(from: $0) },
                     referenceNeighbor: previousItem.flatMap { configurationRelationsItem(from: $0) }
                 )
@@ -90,7 +101,7 @@ enum LazyViewContainerConfigurationBuilder {
             previousItem = item
         }
 
-        return result
+        return (relations, lazyViews)
     }
 
     private static func configurationRelationsItem(from builderItem: ConfigurationBuilderItem) -> LazyViewContainerConfiguration.Relations.Item {

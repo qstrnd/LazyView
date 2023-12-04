@@ -11,18 +11,7 @@ class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer {
 
     // MARK: - Properties
 
-    lazy var lazyViewConfiguration = LazyViewContainerConfiguration {
-        stackView.containing {
-            label
-            nestedLazyStack.containing {
-                button1
-                button2
-                button3
-                button4
-            }
-            textField
-        }
-    }
+    var lazyViewContainerConfiguration: LazyViewContainerConfiguration!
 
     private let label: LazyView<UILabel>
     private let textField: LazyView<UITextField>
@@ -67,45 +56,51 @@ class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer {
 
         super.init(nibName: nil, bundle: nil)
 
+        lazyViewContainerConfiguration = LazyViewContainerConfiguration(container: self) {
+            stackView.containing {
+                label
+                nestedLazyStack.containing {
+                    button1
+                    button2
+                    button3
+                    button4
+                }
+                textField
+            }
+        }
+
         // TODO: Can setting a container can be a part of result builder?
 
         print("=====")
 
-        label.container = self
         label.postInitHandler = { label in
             print("Label is initialized!")
         }
 
-        textField.container = self
         textField.postInitHandler = { textField in
             print("TextField is initialized!")
         }
 
-        button1.container = self
         button1.postInitHandler = { button in
             button.configuration = .borderedProminent()
             print("Button1 is initialized!")
         }
 
-        button2.container = self
         button2.postInitHandler = { button in
             button.configuration = .borderedProminent()
             print("Button2 is initialized!")
         }
 
-        button3.container = self
         button3.postInitHandler = { button in
             button.configuration = .borderedProminent()
             print("Button3 is initialized!")
         }
 
-        button4.container = self
         button4.postInitHandler = { button in
             button.configuration = .borderedProminent()
             print("Button4 is initialized!")
         }
 
-        nestedLazyStack.container = self
         nestedLazyStack.postInitHandler = { stackView in
             stackView.spacing = 16
             print("Lazy nested stack is initialized!")

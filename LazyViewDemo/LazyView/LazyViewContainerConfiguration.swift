@@ -42,8 +42,15 @@ struct LazyViewContainerConfiguration {
         self.relations = relations
     }
 
-    init(@LazyViewContainerConfigurationBuilder _ relations: () -> RelationsDictionary) {
-        self.relations = relations()
+    init(
+        container: LazyViewContainer,
+        @LazyViewContainerConfigurationBuilder _ builder: () -> LazyViewContainerConfigurationBuilderResult
+    ) {
+        let result = builder()
+
+        relations = result.relations
+
+        result.lazyViews.forEach { $0.container = container }
     }
 
     func getRelations(for view: LazyViewReference) -> Relations {

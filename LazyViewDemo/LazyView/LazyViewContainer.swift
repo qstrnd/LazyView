@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LazyViewContainer: AnyObject {
-    var lazyViewConfiguration: LazyViewContainerConfiguration { get }
+    var lazyViewContainerConfiguration: LazyViewContainerConfiguration! { get }
     var rootView: UIView { get }
 
     func insert(lazyView: LazyViewReference)
@@ -22,7 +22,7 @@ extension LazyViewContainer {
 
         guard let view = lazyView.asUIView else { return }
 
-        let relations = lazyViewConfiguration.getRelations(for: lazyView)
+        let relations = lazyViewContainerConfiguration.getRelations(for: lazyView)
 
         // recursively initialize lazy superview
         if case .lazyView(let lazySuperview) = relations.superview {
