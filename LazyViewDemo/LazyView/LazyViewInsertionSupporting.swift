@@ -32,7 +32,7 @@ extension UIStackView {
         if let referenceNeighbor = referenceNeighbor,
            let neighborIndex = arrangedSubviews.firstIndex(of: referenceNeighbor)
         {
-            insertArrangedSubview(view, at: neighborIndex)
+            insertArrangedSubview(view, at: neighborIndex + 1)
         } else {
             insertArrangedSubview(view, at: 0)
         }
