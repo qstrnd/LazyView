@@ -1,0 +1,8 @@
+use_frameworks!
+
+platform :ios, '15.0'
+
+target 'LazyViewDemo' do
+  pod 'LazyView', :path => '../'
+
+end

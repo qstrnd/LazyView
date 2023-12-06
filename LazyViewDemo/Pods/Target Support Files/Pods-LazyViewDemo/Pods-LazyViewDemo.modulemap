@@ -1,0 +1,6 @@
+framework module Pods_LazyViewDemo {
+  umbrella header "Pods-LazyViewDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

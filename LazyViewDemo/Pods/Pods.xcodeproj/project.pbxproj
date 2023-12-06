@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06DD99AD0F6FFF31B04E2C27131D4225 /* LazyView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A990B21DA532B891C443CF57D633E8F8 /* LazyView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4338D60F9AAEF0DF11A221605D5FE485 /* Pods-LazyViewDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8C41A4896C07420C0DCA19684BE8B3C /* Pods-LazyViewDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49B8357B9A360125D9C9DB5E11DC4B1E /* Pods-LazyViewDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C43D7C13CCC45CB33B7049EE5CDD983 /* Pods-LazyViewDemo-dummy.m */; };
+		72753F737AD597C2383DB5194EC376CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		854D060DA3AC5F8E44584F432AFB88AB /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65490DCE12D78B98F07D7C903C81975F /* LazyView.swift */; };
+		9E2F2ECE2DF6430ACD2F83C59D4C4871 /* LazyViewContainerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E4C0E2A0244911B1A3FDA30068549 /* LazyViewContainerConfiguration.swift */; };
+		9F5FA30E35595D15D6246D10D304C4D8 /* LazyViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D26FED8402587B66ADD561D331D6E1 /* LazyViewContainer.swift */; };
+		A587927315AD2CD0F528A26CA3F8B60F /* LazyView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2723C54E497E88FD510AE7FF6AFDA /* LazyView-dummy.m */; };
+		AFA557153A7C48DD302252E23249C332 /* LazyViewContainerConfigurationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4F5EFFA00071A3BCADF5908A682370 /* LazyViewContainerConfigurationBuilder.swift */; };
+		C959C4BA9F505BDA0B5DAD71EA0136F4 /* LazyViewInsertionSupporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D5844A2EDF769D56316CE9B06FDA35 /* LazyViewInsertionSupporting.swift */; };
+		D9168952E35EC941D95CC4B941773F52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36303A31AB02E07375295DA126D1D5AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA3CC00410F75B99A0EF2422503FCDAC;
+			remoteInfo = LazyView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007BBC0F801B928E53D7E70B1FE6181D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0679362DE5FF1FBC2E26F8119936EAE9 /* LazyView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LazyView.release.xcconfig; sourceTree = "<group>"; };
+		0869AC888B47BCCFE3564ADD794D1354 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		20D5844A2EDF769D56316CE9B06FDA35 /* LazyViewInsertionSupporting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyViewInsertionSupporting.swift; path = LazyView/Classes/LazyViewInsertionSupporting.swift; sourceTree = "<group>"; };
+		228A025B2547ACFB77F6B40DA9FFC489 /* LazyView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LazyView-Info.plist"; sourceTree = "<group>"; };
+		31D26FED8402587B66ADD561D331D6E1 /* LazyViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyViewContainer.swift; path = LazyView/Classes/LazyViewContainer.swift; sourceTree = "<group>"; };
+		5C43D7C13CCC45CB33B7049EE5CDD983 /* Pods-LazyViewDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LazyViewDemo-dummy.m"; sourceTree = "<group>"; };
+		60F40297561A935C9428B509E7B12F4C /* LazyView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LazyView-prefix.pch"; sourceTree = "<group>"; };
+		65490DCE12D78B98F07D7C903C81975F /* LazyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyView.swift; path = LazyView/Classes/LazyView.swift; sourceTree = "<group>"; };
+		664493A9D518C611C4D2AE538ED6F105 /* Pods-LazyViewDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LazyViewDemo"; path = Pods_LazyViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		76B6229FD8680BF649FA77C6A8234BB3 /* Pods-LazyViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LazyViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		917865EE7AB6525120A155F0F6703C44 /* Pods-LazyViewDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LazyViewDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A9E4C0E2A0244911B1A3FDA30068549 /* LazyViewContainerConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyViewContainerConfiguration.swift; path = LazyView/Classes/LazyViewContainerConfiguration.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A990B21DA532B891C443CF57D633E8F8 /* LazyView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LazyView-umbrella.h"; sourceTree = "<group>"; };
+		B9A2723C54E497E88FD510AE7FF6AFDA /* LazyView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LazyView-dummy.m"; sourceTree = "<group>"; };
+		C329407174929D84B6A3C3E8A8000A96 /* Pods-LazyViewDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LazyViewDemo.modulemap"; sourceTree = "<group>"; };
+		CF4F5EFFA00071A3BCADF5908A682370 /* LazyViewContainerConfigurationBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyViewContainerConfigurationBuilder.swift; path = LazyView/Classes/LazyViewContainerConfigurationBuilder.swift; sourceTree = "<group>"; };
+		D3ED6A3C47610D42792B75EAB0A4A183 /* Pods-LazyViewDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LazyViewDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		D8C41A4896C07420C0DCA19684BE8B3C /* Pods-LazyViewDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LazyViewDemo-umbrella.h"; sourceTree = "<group>"; };
+		E0341573AA7F8FBCA8AB10DBE4D4B35D /* Pods-LazyViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LazyViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E57ECB3ED999F6054D8FD7353C63233A /* Pods-LazyViewDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LazyViewDemo-frameworks.sh"; sourceTree = "<group>"; };
+		E6359EEF25C986D56886ED3C0A18089F /* LazyView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LazyView; path = LazyView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E76FD3EF0A78EAF2B955528B2876CE7A /* LazyView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LazyView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F05109ACA063ADA0301F163056C9C023 /* Pods-LazyViewDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LazyViewDemo-Info.plist"; sourceTree = "<group>"; };
+		F5BEF0C2170996DD518D46CADD3C9C75 /* LazyView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LazyView.debug.xcconfig; sourceTree = "<group>"; };
+		F92493B39988A18B5AF2E2CE50442947 /* LazyView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LazyView.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D57A988D0BD2EF9BE6E1A07279CB9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72753F737AD597C2383DB5194EC376CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B03DD0A1AE98288F0A7EA15815D32A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9168952E35EC941D95CC4B941773F52 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3838B86D3547913E6892E00AAB089745 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F92493B39988A18B5AF2E2CE50442947 /* LazyView.modulemap */,
+				B9A2723C54E497E88FD510AE7FF6AFDA /* LazyView-dummy.m */,
+				228A025B2547ACFB77F6B40DA9FFC489 /* LazyView-Info.plist */,
+				60F40297561A935C9428B509E7B12F4C /* LazyView-prefix.pch */,
+				A990B21DA532B891C443CF57D633E8F8 /* LazyView-umbrella.h */,
+				F5BEF0C2170996DD518D46CADD3C9C75 /* LazyView.debug.xcconfig */,
+				0679362DE5FF1FBC2E26F8119936EAE9 /* LazyView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "LazyViewDemo/Pods/Target Support Files/LazyView";
+			sourceTree = "<group>";
+		};
+		42774926799C92ADB94EDEA8E01E5188 /* LazyView */ = {
+			isa = PBXGroup;
+			children = (
+				65490DCE12D78B98F07D7C903C81975F /* LazyView.swift */,
+				31D26FED8402587B66ADD561D331D6E1 /* LazyViewContainer.swift */,
+				9A9E4C0E2A0244911B1A3FDA30068549 /* LazyViewContainerConfiguration.swift */,
+				CF4F5EFFA00071A3BCADF5908A682370 /* LazyViewContainerConfigurationBuilder.swift */,
+				20D5844A2EDF769D56316CE9B06FDA35 /* LazyViewInsertionSupporting.swift */,
+				65A57F66E1ADC744F51321F584A74977 /* Pod */,
+				3838B86D3547913E6892E00AAB089745 /* Support Files */,
+			);
+			name = LazyView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5CD55553DD2DB24B17F8CFF5109BBDB3 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42774926799C92ADB94EDEA8E01E5188 /* LazyView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		65A57F66E1ADC744F51321F584A74977 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E76FD3EF0A78EAF2B955528B2876CE7A /* LazyView.podspec */,
+				007BBC0F801B928E53D7E70B1FE6181D /* LICENSE */,
+				0869AC888B47BCCFE3564ADD794D1354 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		AD30141E3A73D7904F969A131B72AA30 /* Pods-LazyViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C329407174929D84B6A3C3E8A8000A96 /* Pods-LazyViewDemo.modulemap */,
+				917865EE7AB6525120A155F0F6703C44 /* Pods-LazyViewDemo-acknowledgements.markdown */,
+				D3ED6A3C47610D42792B75EAB0A4A183 /* Pods-LazyViewDemo-acknowledgements.plist */,
+				5C43D7C13CCC45CB33B7049EE5CDD983 /* Pods-LazyViewDemo-dummy.m */,
+				E57ECB3ED999F6054D8FD7353C63233A /* Pods-LazyViewDemo-frameworks.sh */,
+				F05109ACA063ADA0301F163056C9C023 /* Pods-LazyViewDemo-Info.plist */,
+				D8C41A4896C07420C0DCA19684BE8B3C /* Pods-LazyViewDemo-umbrella.h */,
+				76B6229FD8680BF649FA77C6A8234BB3 /* Pods-LazyViewDemo.debug.xcconfig */,
+				E0341573AA7F8FBCA8AB10DBE4D4B35D /* Pods-LazyViewDemo.release.xcconfig */,
+			);
+			name = "Pods-LazyViewDemo";
+			path = "Target Support Files/Pods-LazyViewDemo";
+			sourceTree = "<group>";
+		};
+		BFCA35BD6FE08F1296F03B3160F395AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6359EEF25C986D56886ED3C0A18089F /* LazyView */,
+				664493A9D518C611C4D2AE538ED6F105 /* Pods-LazyViewDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				5CD55553DD2DB24B17F8CFF5109BBDB3 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				BFCA35BD6FE08F1296F03B3160F395AE /* Products */,
+				F9DC400F1F1662F864672F34A743AA0F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9DC400F1F1662F864672F34A743AA0F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD30141E3A73D7904F969A131B72AA30 /* Pods-LazyViewDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		28B2BEAD756ED2ACEA0E56B0D684F10F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06DD99AD0F6FFF31B04E2C27131D4225 /* LazyView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77518E32EFAFF8C20A50788932867674 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4338D60F9AAEF0DF11A221605D5FE485 /* Pods-LazyViewDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A8468CA4723B4AEBAA2936B531042B01 /* Pods-LazyViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58702020EEAAA961603B5661E9A039C5 /* Build configuration list for PBXNativeTarget "Pods-LazyViewDemo" */;
+			buildPhases = (
+				77518E32EFAFF8C20A50788932867674 /* Headers */,
+				5B2F206AEB1826659E44ABEE37123552 /* Sources */,
+				A4B03DD0A1AE98288F0A7EA15815D32A /* Frameworks */,
+				AA0D98FC6E5EB4A901355FEAF48C5632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0D1E401589A8850CCFE16ECAC6E56E1 /* PBXTargetDependency */,
+			);
+			name = "Pods-LazyViewDemo";
+			productName = Pods_LazyViewDemo;
+			productReference = 664493A9D518C611C4D2AE538ED6F105 /* Pods-LazyViewDemo */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA3CC00410F75B99A0EF2422503FCDAC /* LazyView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFFF9F80B74A7C853C433BF136DDDE78 /* Build configuration list for PBXNativeTarget "LazyView" */;
+			buildPhases = (
+				28B2BEAD756ED2ACEA0E56B0D684F10F /* Headers */,
+				61C76BC874BB49FD401094FD292643E0 /* Sources */,
+				2D57A988D0BD2EF9BE6E1A07279CB9BE /* Frameworks */,
+				EFD4DB116C2C16C6153AC470F1AD42F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyView;
+			productName = LazyView;
+			productReference = E6359EEF25C986D56886ED3C0A18089F /* LazyView */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = BFCA35BD6FE08F1296F03B3160F395AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA3CC00410F75B99A0EF2422503FCDAC /* LazyView */,
+				A8468CA4723B4AEBAA2936B531042B01 /* Pods-LazyViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0D98FC6E5EB4A901355FEAF48C5632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD4DB116C2C16C6153AC470F1AD42F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B2F206AEB1826659E44ABEE37123552 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49B8357B9A360125D9C9DB5E11DC4B1E /* Pods-LazyViewDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61C76BC874BB49FD401094FD292643E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854D060DA3AC5F8E44584F432AFB88AB /* LazyView.swift in Sources */,
+				A587927315AD2CD0F528A26CA3F8B60F /* LazyView-dummy.m in Sources */,
+				9F5FA30E35595D15D6246D10D304C4D8 /* LazyViewContainer.swift in Sources */,
+				9E2F2ECE2DF6430ACD2F83C59D4C4871 /* LazyViewContainerConfiguration.swift in Sources */,
+				AFA557153A7C48DD302252E23249C332 /* LazyViewContainerConfigurationBuilder.swift in Sources */,
+				C959C4BA9F505BDA0B5DAD71EA0136F4 /* LazyViewInsertionSupporting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0D1E401589A8850CCFE16ECAC6E56E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LazyView;
+			target = DA3CC00410F75B99A0EF2422503FCDAC /* LazyView */;
+			targetProxy = 36303A31AB02E07375295DA126D1D5AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F6BE50974FC3C0864BC81666C14E0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0341573AA7F8FBCA8AB10DBE4D4B35D /* Pods-LazyViewDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LazyViewDemo/Pods-LazyViewDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LazyViewDemo/Pods-LazyViewDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		90DF9601F15B69AE4A903F2085A91F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5BEF0C2170996DD518D46CADD3C9C75 /* LazyView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LazyView/LazyView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LazyView/LazyView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LazyView/LazyView.modulemap";
+				PRODUCT_MODULE_NAME = LazyView;
+				PRODUCT_NAME = LazyView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DA5C4D129F848BED0FEC3AA6C8A8E5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0679362DE5FF1FBC2E26F8119936EAE9 /* LazyView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LazyView/LazyView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LazyView/LazyView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LazyView/LazyView.modulemap";
+				PRODUCT_MODULE_NAME = LazyView;
+				PRODUCT_NAME = LazyView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F68F49CBB3464EA0ADAA3436833208E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B6229FD8680BF649FA77C6A8234BB3 /* Pods-LazyViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LazyViewDemo/Pods-LazyViewDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LazyViewDemo/Pods-LazyViewDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58702020EEAAA961603B5661E9A039C5 /* Build configuration list for PBXNativeTarget "Pods-LazyViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68F49CBB3464EA0ADAA3436833208E2 /* Debug */,
+				0F6BE50974FC3C0864BC81666C14E0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFFF9F80B74A7C853C433BF136DDDE78 /* Build configuration list for PBXNativeTarget "LazyView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90DF9601F15B69AE4A903F2085A91F87 /* Debug */,
+				DA5C4D129F848BED0FEC3AA6C8A8E5CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

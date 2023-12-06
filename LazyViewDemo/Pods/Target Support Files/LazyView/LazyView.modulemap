@@ -1,0 +1,6 @@
+framework module LazyView {
+  umbrella header "LazyView-umbrella.h"
+
+  export *
+  module * { export * }
+}
