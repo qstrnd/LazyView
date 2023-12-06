@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/LazyView.svg?style=flat)](https://cocoapods.org/pods/LazyView)
 [![Platform](https://img.shields.io/cocoapods/p/LazyView.svg?style=flat)](https://cocoapods.org/pods/LazyView)
 
-## Example
+## Demo
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the demo project, clone the repo, and run `pod install` from the LazyViewDemo directory first.
 
 ## Requirements
 
