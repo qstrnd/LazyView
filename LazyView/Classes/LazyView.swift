@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol LazyViewReference: AnyObject {
+public protocol LazyViewReference: AnyObject {
     var uniqueViewId: UUID { get }
     var asUIView: UIView? { get }
     var container: LazyViewContainer? { get set }
@@ -15,32 +15,32 @@ protocol LazyViewReference: AnyObject {
     func prepare()
 }
 
-final class LazyView<View: UIView>: LazyViewReference {
-    typealias Initializer = () -> View
-    typealias ViewCondition = (View) -> Bool
-    typealias ViewOperation = (View) -> Void
-    typealias PostConfiguration = (_ view: View, _ isConfigured: Bool) -> Void
+public final class LazyView<View: UIView>: LazyViewReference {
+    public typealias Initializer = () -> View
+    public typealias ViewCondition = (View) -> Bool
+    public typealias ViewOperation = (View) -> Void
+    public typealias PostConfiguration = (_ view: View, _ isConfigured: Bool) -> Void
 
 
     // MARK: - Properties
 
-    weak var container: LazyViewContainer?
-    var postInitHandler: ViewOperation?
+    public weak var container: LazyViewContainer?
+    public var postInitHandler: ViewOperation?
 
     /// Default configuration is provided
-    var postConfigureHandler: PostConfiguration? = { view, isConfigured in
+    public var postConfigureHandler: PostConfiguration? = { view, isConfigured in
         view.isHidden = !isConfigured
     }
 
-    var uniqueViewId = UUID()
+    public var uniqueViewId = UUID()
 
-    var asUIView: UIView? {
+    public var asUIView: UIView? {
         guard let view = view else { return nil }
         return view as UIView
     }
 
     /// Get underlying view if it has been already initialized
-    var view: View? {
+    public var view: View? {
         switch state {
         case .uninitialized:
             return nil
@@ -65,22 +65,22 @@ final class LazyView<View: UIView>: LazyViewReference {
 
     // MARK: Init
 
-    init(_ initializer: @escaping Initializer) {
+    public init(_ initializer: @escaping Initializer) {
         self.state = .uninitialized(initializer)
     }
 
-    func prepare() {
+    public func prepare() {
         initialize()
         insertAsSubview()
     }
 
     // MARK: Configuration
 
-    func configureAsVisible(_ configureOperation: ViewOperation) {
+    public func configureAsVisible(_ configureOperation: ViewOperation) {
         configure(on: true, configureOperation)
     }
 
-    func configure(on condition: Bool, _ configureOperation: ViewOperation) {
+    public func configure(on condition: Bool, _ configureOperation: ViewOperation) {
         guard condition else {
             if case .ready(let view) = state {
                 postConfigureHandler?(view, false)
@@ -108,11 +108,11 @@ final class LazyView<View: UIView>: LazyViewReference {
 
     // MARK: Operations
 
-    func performIfVisible(_ operation: ViewOperation) {
+    public func performIfVisible(_ operation: ViewOperation) {
         perform(on: { !$0.isHidden }, operation)
     }
 
-    func perform(on condition: ViewCondition, _ operation: ViewOperation) {
+    public func perform(on condition: ViewCondition, _ operation: ViewOperation) {
         guard case .initialized(let view) = state else {
             return
         }

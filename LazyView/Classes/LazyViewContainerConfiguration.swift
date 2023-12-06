@@ -7,11 +7,11 @@
 
 import UIKit
 
-struct LazyViewContainerConfiguration {
-    typealias ViewId = UUID
-    typealias RelationsDictionary = [ViewId: Relations]
+public struct LazyViewContainerConfiguration {
+    public typealias ViewId = UUID
+    public typealias RelationsDictionary = [ViewId: Relations]
 
-    struct Relations {
+    public struct Relations {
         let superview: Item?
         let referenceNeighbor: Item?
 
@@ -42,7 +42,7 @@ struct LazyViewContainerConfiguration {
         self.relations = relations
     }
 
-    init(
+    public init(
         container: LazyViewContainer,
         @LazyViewContainerConfigurationBuilder _ builder: () -> LazyViewContainerConfigurationBuilderResult
     ) {

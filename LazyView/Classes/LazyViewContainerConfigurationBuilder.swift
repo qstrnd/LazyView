@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - ContainerItem
 
-enum ConfigurationBuilderItem {
+public enum ConfigurationBuilderItem {
     case view(UIView, nested: [ConfigurationBuilderItem])
     case lazyView(LazyViewReference, nested: [ConfigurationBuilderItem])
 
@@ -23,50 +23,50 @@ enum ConfigurationBuilderItem {
     }
 }
 
-protocol ViewConfigurationItemConvertible {
+public protocol ViewConfigurationItemConvertible {
     var configurationItem: ConfigurationBuilderItem { get }
 }
 
 extension ConfigurationBuilderItem: ViewConfigurationItemConvertible {
-    var configurationItem: ConfigurationBuilderItem { self }
+    public var configurationItem: ConfigurationBuilderItem { self }
 }
 
 extension UIView: ViewConfigurationItemConvertible {
-    var configurationItem: ConfigurationBuilderItem {
+    public var configurationItem: ConfigurationBuilderItem {
         .view(self, nested: [])
     }
 
-    func containing(@LazyViewContainerConfigurationTransientBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
+    public func containing(@LazyViewContainerConfigurationTransientBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
         .view(self, nested: nestedComponents())
     }
 }
 
 extension LazyView: ViewConfigurationItemConvertible {
-    var configurationItem: ConfigurationBuilderItem {
+    public var configurationItem: ConfigurationBuilderItem {
         .lazyView(self, nested: [])
     }
 
-    func containing(@LazyViewContainerConfigurationTransientBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
+    public func containing(@LazyViewContainerConfigurationTransientBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
         .lazyView(self, nested: nestedComponents())
     }
 }
 
 @resultBuilder
-enum LazyViewContainerConfigurationTransientBuilder {
-    static func buildBlock(_ components: ViewConfigurationItemConvertible...) -> [ConfigurationBuilderItem] {
+public enum LazyViewContainerConfigurationTransientBuilder {
+    public static func buildBlock(_ components: ViewConfigurationItemConvertible...) -> [ConfigurationBuilderItem] {
         components.map { $0.configurationItem }
     }
 }
 
-typealias LazyViewContainerConfigurationBuilderResult = (relations: LazyViewContainerConfiguration.RelationsDictionary, lazyViews: [LazyViewReference])
+public typealias LazyViewContainerConfigurationBuilderResult = (relations: LazyViewContainerConfiguration.RelationsDictionary, lazyViews: [LazyViewReference])
 
 @resultBuilder
-enum LazyViewContainerConfigurationBuilder {
-    static func buildBlock(_ components: ViewConfigurationItemConvertible...) -> [ConfigurationBuilderItem] {
+public enum LazyViewContainerConfigurationBuilder {
+    public static func buildBlock(_ components: ViewConfigurationItemConvertible...) -> [ConfigurationBuilderItem] {
         components.map { $0.configurationItem }
     }
 
-    static func buildFinalResult(_ components: [ConfigurationBuilderItem]) -> LazyViewContainerConfigurationBuilderResult {
+    public static func buildFinalResult(_ components: [ConfigurationBuilderItem]) -> LazyViewContainerConfigurationBuilderResult {
         buildKeyedRelations(in: nil, from: components)
     }
 

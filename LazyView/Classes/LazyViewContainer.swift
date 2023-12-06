@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol LazyViewContainer: AnyObject {
+public protocol LazyViewContainer: AnyObject {
     var lazyViewContainerConfiguration: LazyViewContainerConfiguration! { get }
     var rootView: UIView { get }
 
     func insert(lazyView: LazyViewReference)
 }
 
-extension LazyViewContainer {
+public extension LazyViewContainer {
     func insert(lazyView: LazyViewReference) {
         if lazyView.asUIView == nil {
             lazyView.prepare()
@@ -38,13 +38,13 @@ extension LazyViewContainer {
 
 // MARK: - UIKit extensions
 
-extension LazyViewContainer where Self: UIView {
+public extension LazyViewContainer where Self: UIView {
     var rootView: UIView {
         self
     }
 }
 
-extension LazyViewContainer where Self: UIViewController {
+public extension LazyViewContainer where Self: UIViewController {
     var rootView: UIView {
         view
     }

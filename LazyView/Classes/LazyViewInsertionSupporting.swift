@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol LazyViewInsertionSupporting {
+public protocol LazyViewInsertionSupporting {
     func insert(view: UIView, referenceNeighbor: UIView?)
 }
 
@@ -16,7 +16,7 @@ protocol LazyViewInsertionSupporting {
 extension UIView: LazyViewInsertionSupporting {
 
     // This method can be overriden for view-specific behavior, that's why it used @objc
-    @objc func insert(view: UIView, referenceNeighbor: UIView?) {
+    @objc public func insert(view: UIView, referenceNeighbor: UIView?) {
         if let referenceNeighbor = referenceNeighbor {
             insertSubview(view, aboveSubview: referenceNeighbor)
         } else {
@@ -26,7 +26,7 @@ extension UIView: LazyViewInsertionSupporting {
 
 }
 
-extension UIStackView {
+public extension UIStackView {
 
     override func insert(view: UIView, referenceNeighbor: UIView?) {
         if let referenceNeighbor = referenceNeighbor,
