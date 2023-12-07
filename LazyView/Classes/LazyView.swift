@@ -182,7 +182,7 @@ public final class LazyView<View>: LazyViewReference {
     ///   - condition: The condition that must be met for the operation to be performed.
     ///   - operation: The operation on the view.
     public func perform(on condition: ViewCondition, _ operation: ViewOperation) {
-        guard case .initialized(let view) = state else {
+        guard case .ready(let view) = state else {
             return
         }
 
