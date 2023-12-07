@@ -1,0 +1,6 @@
+framework module Pods_LazyViewTests {
+  umbrella header "Pods-LazyViewTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -5,4 +5,8 @@ platform :ios, '15.0'
 target 'LazyViewDemo' do
   pod 'LazyView', :path => '../'
 
+  target 'LazyViewTests' do
+    inherit! :search_paths
+
+  end
 end
