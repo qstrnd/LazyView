@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - ContainerItem
+// MARK: - ConfigurationBuilderItem
 
 public enum ConfigurationBuilderItem {
     case view(UIView, nested: [ConfigurationBuilderItem])
@@ -23,12 +23,14 @@ public enum ConfigurationBuilderItem {
     }
 }
 
-public protocol ViewConfigurationItemConvertible {
-    var configurationItem: ConfigurationBuilderItem { get }
+extension ConfigurationBuilderItem: ViewConfigurationItemConvertible, ViewConfigurationContainedItemConvertible {
+    public var configurationItem: ConfigurationBuilderItem { self }
 }
 
-extension ConfigurationBuilderItem: ViewConfigurationItemConvertible {
-    public var configurationItem: ConfigurationBuilderItem { self }
+// MARK: - ViewConfigurationItemConvertible
+
+public protocol ViewConfigurationItemConvertible {
+    var configurationItem: ConfigurationBuilderItem { get }
 }
 
 extension UIView: ViewConfigurationItemConvertible {
@@ -36,7 +38,7 @@ extension UIView: ViewConfigurationItemConvertible {
         .view(self, nested: [])
     }
 
-    public func containing(@LazyViewContainerConfigurationTransientBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
+    public func containing(@LazyViewContainerConfigurationContainedBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
         .view(self, nested: nestedComponents())
     }
 }
@@ -46,17 +48,32 @@ extension LazyView: ViewConfigurationItemConvertible {
         .lazyView(self, nested: [])
     }
 
-    public func containing(@LazyViewContainerConfigurationTransientBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
+    public func containing(@LazyViewContainerConfigurationContainedBuilder _ nestedComponents: () -> [ConfigurationBuilderItem]) -> ConfigurationBuilderItem {
         .lazyView(self, nested: nestedComponents())
     }
 }
 
+// MARK: - ViewConfigurationContainedItemConvertible
+
+public protocol ViewConfigurationContainedItemConvertible {
+    var configurationItem: ConfigurationBuilderItem { get }
+}
+
+extension LazyView: ViewConfigurationContainedItemConvertible {}
+
 @resultBuilder
-public enum LazyViewContainerConfigurationTransientBuilder {
-    public static func buildBlock(_ components: ViewConfigurationItemConvertible...) -> [ConfigurationBuilderItem] {
+public enum LazyViewContainerConfigurationContainedBuilder {
+    public static func buildBlock(_ components: ViewConfigurationContainedItemConvertible...) -> [ConfigurationBuilderItem] {
         components.map { $0.configurationItem }
     }
+
+    @available(*, unavailable, message: "Only instances of LazyView can be nested inside `containing` closure")
+    public static func buildBlock(_ components: ViewConfigurationItemConvertible...) -> [ConfigurationBuilderItem] {
+        fatalError()
+    }
 }
+
+// MARK: - LazyViewContainerConfigurationBuilder
 
 public typealias LazyViewContainerConfigurationBuilderResult = (relations: LazyViewContainerConfiguration.RelationsDictionary, lazyViews: [LazyViewReference])
 
