@@ -1,5 +1,5 @@
 PODS:
-  - LazyView (0.1.0)
+  - LazyView (0.2.0)
 
 DEPENDENCIES:
   - LazyView (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LazyView: d962139ff97cb7b251a6628f6ce2b1926591cf05
+  LazyView: 4457368affeaa194f1585da0f7cfe16d840c4af7
 
-PODFILE CHECKSUM: 009873c8ad9905cc9783d2aa7f9549bd8f85a81e
+PODFILE CHECKSUM: 44863c04cd6bdc00792ba45b01953b5a2bdb2846
 
 COCOAPODS: 1.14.3

@@ -7,9 +7,13 @@
 
 import UIKit
 
+/// The container that hosts lazy views and is responsible for their insertion upon request.
+///
+/// When confirming your `UIView` or `UIViewController` subclass to `LazyViewContainer`,
+/// you only need to set up `lazyViewContainerConfiguration`.
 public protocol LazyViewContainer: AnyObject {
     var lazyViewContainerConfiguration: LazyViewContainerConfiguration! { get }
-    var rootView: UIView { get }
+    var lazyContainerRootView: UIView { get }
 
     func insert(lazyView: LazyViewReference)
 }
@@ -29,7 +33,7 @@ public extension LazyViewContainer {
             insert(lazyView: lazySuperview)
         }
 
-        let superview = relations.superview?.asUIView ?? rootView
+        let superview = relations.superview?.asUIView ?? lazyContainerRootView
 
         superview.insert(view: view, referenceNeighbor: relations.referenceNeighbor?.asUIView)
     }
@@ -39,13 +43,13 @@ public extension LazyViewContainer {
 // MARK: - UIKit extensions
 
 public extension LazyViewContainer where Self: UIView {
-    var rootView: UIView {
+    var lazyContainerRootView: UIView {
         self
     }
 }
 
 public extension LazyViewContainer where Self: UIViewController {
-    var rootView: UIView {
+    var lazyContainerRootView: UIView {
         view
     }
 }

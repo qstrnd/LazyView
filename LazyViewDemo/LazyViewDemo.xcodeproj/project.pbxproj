@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3DBABC7ACBEEC4B6A501D7 /* Pods_LazyViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F963DD507725AAF2CB399429 /* Pods_LazyViewTests.framework */; };
 		A11322302B210CCC00C67AAF /* ViewControllerWithLazySubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A113222F2B210CCC00C67AAF /* ViewControllerWithLazySubviews.swift */; };
 		A11322352B210D8200C67AAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11322332B210D8200C67AAF /* Main.storyboard */; };
+		A15860D62B226C08000803C5 /* LazyViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15860D52B226C08000803C5 /* LazyViewTests.swift */; };
+		A15860DD2B2273E8000803C5 /* LazyViewContainerConfigurationBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15860DC2B2273E8000803C5 /* LazyViewContainerConfigurationBuilderTests.swift */; };
+		A15860E02B227407000803C5 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15860DF2B227407000803C5 /* ContainerView.swift */; };
 		A16F75FF2B210B7300D83BEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F75FE2B210B7300D83BEE /* AppDelegate.swift */; };
 		A16F76012B210B7300D83BEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F76002B210B7300D83BEE /* SceneDelegate.swift */; };
 		A16F76032B210B7300D83BEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F76022B210B7300D83BEE /* ViewController.swift */; };
@@ -17,12 +21,28 @@
 		F37E620BD42BFD60B0001987 /* Pods_LazyViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D3BB23FFA978BDF5DEC2AE /* Pods_LazyViewDemo.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A15860D72B226C08000803C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16F75F32B210B7300D83BEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A16F75FA2B210B7300D83BEE;
+			remoteInfo = LazyViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		14C3B0DD12534812EB15FB32 /* Pods-LazyViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyViewDemo.release.xcconfig"; path = "Target Support Files/Pods-LazyViewDemo/Pods-LazyViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2656B7323C068A5D0B3995F8 /* Pods-LazyViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyViewTests.debug.xcconfig"; path = "Target Support Files/Pods-LazyViewTests/Pods-LazyViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70D3BB23FFA978BDF5DEC2AE /* Pods_LazyViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D52AB1D5090A8105CC257F9 /* Pods-LazyViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyViewTests.release.xcconfig"; path = "Target Support Files/Pods-LazyViewTests/Pods-LazyViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		8020A92B630A18A66B2ED235 /* Pods-LazyViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-LazyViewDemo/Pods-LazyViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A113222F2B210CCC00C67AAF /* ViewControllerWithLazySubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithLazySubviews.swift; sourceTree = "<group>"; };
 		A11322342B210D8200C67AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A15860D32B226C08000803C5 /* LazyViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A15860D52B226C08000803C5 /* LazyViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewTests.swift; sourceTree = "<group>"; };
+		A15860DC2B2273E8000803C5 /* LazyViewContainerConfigurationBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewContainerConfigurationBuilderTests.swift; sourceTree = "<group>"; };
+		A15860DF2B227407000803C5 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		A16F75FB2B210B7300D83BEE /* LazyViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16F75FE2B210B7300D83BEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16F76002B210B7300D83BEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,9 +50,18 @@
 		A16F76072B210B7400D83BEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A16F760A2B210B7400D83BEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A16F760C2B210B7400D83BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F963DD507725AAF2CB399429 /* Pods_LazyViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A15860D02B226C08000803C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3DBABC7ACBEEC4B6A501D7 /* Pods_LazyViewTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A16F75F82B210B7300D83BEE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,14 +78,35 @@
 			children = (
 				8020A92B630A18A66B2ED235 /* Pods-LazyViewDemo.debug.xcconfig */,
 				14C3B0DD12534812EB15FB32 /* Pods-LazyViewDemo.release.xcconfig */,
+				2656B7323C068A5D0B3995F8 /* Pods-LazyViewTests.debug.xcconfig */,
+				7D52AB1D5090A8105CC257F9 /* Pods-LazyViewTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A15860D42B226C08000803C5 /* LazyViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				A15860DE2B2273FB000803C5 /* Helpers */,
+				A15860D52B226C08000803C5 /* LazyViewTests.swift */,
+				A15860DC2B2273E8000803C5 /* LazyViewContainerConfigurationBuilderTests.swift */,
+			);
+			path = LazyViewTests;
+			sourceTree = "<group>";
+		};
+		A15860DE2B2273FB000803C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A15860DF2B227407000803C5 /* ContainerView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A16F75F22B210B7300D83BEE = {
 			isa = PBXGroup;
 			children = (
 				A16F75FD2B210B7300D83BEE /* LazyViewDemo */,
+				A15860D42B226C08000803C5 /* LazyViewTests */,
 				A16F75FC2B210B7300D83BEE /* Products */,
 				73CE19C856FFC3673F5B2BD2 /* Pods */,
 				E5C835C4FC57B6961CAA4F43 /* Frameworks */,
@@ -67,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				A16F75FB2B210B7300D83BEE /* LazyViewDemo.app */,
+				A15860D32B226C08000803C5 /* LazyViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				70D3BB23FFA978BDF5DEC2AE /* Pods_LazyViewDemo.framework */,
+				F963DD507725AAF2CB399429 /* Pods_LazyViewTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,6 +149,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A15860D22B226C08000803C5 /* LazyViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A15860DB2B226C08000803C5 /* Build configuration list for PBXNativeTarget "LazyViewTests" */;
+			buildPhases = (
+				213D51D23D6C8A4D4A33A7EB /* [CP] Check Pods Manifest.lock */,
+				A15860CF2B226C08000803C5 /* Sources */,
+				A15860D02B226C08000803C5 /* Frameworks */,
+				A15860D12B226C08000803C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A15860D82B226C08000803C5 /* PBXTargetDependency */,
+			);
+			name = LazyViewTests;
+			productName = LazyViewTests;
+			productReference = A15860D32B226C08000803C5 /* LazyViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A16F75FA2B210B7300D83BEE /* LazyViewDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A16F760F2B210B7400D83BEE /* Build configuration list for PBXNativeTarget "LazyViewDemo" */;
@@ -126,6 +197,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					A15860D22B226C08000803C5 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = A16F75FA2B210B7300D83BEE;
+					};
 					A16F75FA2B210B7300D83BEE = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -145,11 +220,19 @@
 			projectRoot = "";
 			targets = (
 				A16F75FA2B210B7300D83BEE /* LazyViewDemo */,
+				A15860D22B226C08000803C5 /* LazyViewTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A15860D12B226C08000803C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A16F75F92B210B7300D83BEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +246,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		213D51D23D6C8A4D4A33A7EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LazyViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3BDDB446760B1E3AE2DE31B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +310,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A15860CF2B226C08000803C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A15860D62B226C08000803C5 /* LazyViewTests.swift in Sources */,
+				A15860DD2B2273E8000803C5 /* LazyViewContainerConfigurationBuilderTests.swift in Sources */,
+				A15860E02B227407000803C5 /* ContainerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A16F75F72B210B7300D83BEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +332,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A15860D82B226C08000803C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A16F75FA2B210B7300D83BEE /* LazyViewDemo */;
+			targetProxy = A15860D72B226C08000803C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A11322332B210D8200C67AAF /* Main.storyboard */ = {
@@ -238,6 +361,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A15860D92B226C08000803C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2656B7323C068A5D0B3995F8 /* Pods-LazyViewTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8ZP5CBZNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qstrnd.LazyViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyViewDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LazyViewDemo";
+			};
+			name = Debug;
+		};
+		A15860DA2B226C08000803C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D52AB1D5090A8105CC257F9 /* Pods-LazyViewTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8ZP5CBZNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qstrnd.LazyViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyViewDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LazyViewDemo";
+			};
+			name = Release;
+		};
 		A16F760D2B210B7400D83BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -420,6 +581,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A15860DB2B226C08000803C5 /* Build configuration list for PBXNativeTarget "LazyViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A15860D92B226C08000803C5 /* Debug */,
+				A15860DA2B226C08000803C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A16F75F62B210B7300D83BEE /* Build configuration list for PBXProject "LazyViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

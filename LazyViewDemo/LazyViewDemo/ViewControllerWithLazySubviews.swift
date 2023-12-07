@@ -8,12 +8,14 @@
 import UIKit
 import LazyView
 
+// Conform your UIView or UIViewController to LazyViewContainer
 final class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer {
 
     // MARK: - Properties
 
     var lazyViewContainerConfiguration: LazyViewContainerConfiguration!
 
+    // Define properties for lazy views
     private let label: LazyView<UILabel>
     private let textField: LazyView<UITextField>
     private let stackView = UIStackView()
@@ -26,6 +28,9 @@ final class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer 
     // MARK: - Methods
 
     init() {
+
+        // Initialize lazy views by providing an initializer for the underlying views
+        // Note that self is intentionally not referenced at this step
 
         label = LazyView {
             UILabel()
@@ -57,6 +62,11 @@ final class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer 
 
         super.init(nibName: nil, bundle: nil)
 
+        // Initialize container configuration using DSL.
+        // Stack view contains label, nestedLazyStack and textField;
+        // nestedLazyStack contains buttons.
+        // The order is important! Read more in the docs for LazyViewContainerConfiguration
+
         lazyViewContainerConfiguration = LazyViewContainerConfiguration(container: self) {
             stackView.containing {
                 label
@@ -70,16 +80,18 @@ final class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer 
             }
         }
 
-        // TODO: Can setting a container can be a part of result builder?
-
         print("=====")
+
+        // Use postInitHandler to set up things such as delegates
+
+        textField.postInitHandler = { [weak self] textField in
+            guard let self else { return }
+            textField.delegate = self
+            print("TextField is initialized!")
+        }
 
         label.postInitHandler = { label in
             print("Label is initialized!")
-        }
-
-        textField.postInitHandler = { textField in
-            print("TextField is initialized!")
         }
 
         button1.postInitHandler = { button in
@@ -113,6 +125,10 @@ final class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer 
     }
 
     func configure(with configuration: Configuration) {
+
+        // Magic happens here 🪄
+        // The views are initialized and configured only if the condition is met
+
         label.configure(on: configuration.showLabel) { label in
             label.text = "Lazy label"
         }
@@ -158,3 +174,5 @@ final class ViewControllerWithLazySubviews: UIViewController, LazyViewContainer 
     }
 
 }
+
+extension ViewControllerWithLazySubviews: UITextFieldDelegate {}
