@@ -8,9 +8,10 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LazyView'
-  s.version          = '0.1.0'
-  s.summary          = 'A lightweight wrapper for initializing subviews lazily '
-  s.description      = 'A lightweight wrapper for initializing subviews lazily '
+  s.version          = '0.2.0'
+  s.summary          = 'A lightweight wrapper for lazily initializing subviews'
+  s.description      = 'A lightweight wrapper for lazily initializing subviews that can improve rendering speed for your complex view. Follow an example in the README.'
+  s.swift_versions   = '5.1'
   s.homepage         = 'https://github.com/qstrnd/LazyView'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Andy' => 'a.iakovlev@proton.me' }
