@@ -16,7 +16,7 @@ public protocol LazyViewInsertionSupporting {
 extension UIView: LazyViewInsertionSupporting {
 
     // This method can be overriden for view-specific behavior, that's why it used @objc
-    @objc public func insert(view: UIView, referenceNeighbor: UIView?) {
+    @objc open func insert(view: UIView, referenceNeighbor: UIView?) {
         if let referenceNeighbor = referenceNeighbor {
             insertSubview(view, aboveSubview: referenceNeighbor)
         } else {

@@ -15,7 +15,7 @@ public protocol LazyViewReference: AnyObject {
     func prepare()
 }
 
-public final class LazyView<View: UIView>: LazyViewReference {
+public final class LazyView<View>: LazyViewReference {
     public typealias Initializer = () -> View
     public typealias ViewCondition = (View) -> Bool
     public typealias ViewOperation = (View) -> Void
@@ -28,15 +28,13 @@ public final class LazyView<View: UIView>: LazyViewReference {
     public var postInitHandler: ViewOperation?
 
     /// Default configuration is provided
-    public var postConfigureHandler: PostConfiguration? = { view, isConfigured in
-        view.isHidden = !isConfigured
-    }
+    public var postConfigureHandler: PostConfiguration?
 
     public var uniqueViewId = UUID()
 
     public var asUIView: UIView? {
         guard let view = view else { return nil }
-        return view as UIView
+        return view as? UIView
     }
 
     /// Get underlying view if it has been already initialized
@@ -67,6 +65,11 @@ public final class LazyView<View: UIView>: LazyViewReference {
 
     public init(_ initializer: @escaping Initializer) {
         self.state = .uninitialized(initializer)
+
+        postConfigureHandler = { [unowned self] _, isConfigured in
+            guard let view = self.asUIView else { return }
+            view.isHidden = !isConfigured
+        }
     }
 
     public func prepare() {
@@ -76,7 +79,11 @@ public final class LazyView<View: UIView>: LazyViewReference {
 
     // MARK: Configuration
 
-    public func configureAsVisible(_ configureOperation: ViewOperation) {
+    public func configure(on condition: Bool) {
+        configure(on: condition, { _ in })
+    }
+
+    public func configureAsVisible(_ configureOperation: ViewOperation = { _ in }) {
         configure(on: true, configureOperation)
     }
 
@@ -109,7 +116,13 @@ public final class LazyView<View: UIView>: LazyViewReference {
     // MARK: Operations
 
     public func performIfVisible(_ operation: ViewOperation) {
-        perform(on: { !$0.isHidden }, operation)
+        perform(
+            on: { _ in
+                guard let view = self.asUIView else { return false }
+                return !view.isHidden
+            },
+            operation
+        )
     }
 
     public func perform(on condition: ViewCondition, _ operation: ViewOperation) {
